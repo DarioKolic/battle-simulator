@@ -15,7 +15,7 @@ const config = {
 
   baseHealth: 100,
 
-  damage: 10,
+  damage: 13,
 
   locationLimit: 5,
 };

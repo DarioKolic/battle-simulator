@@ -33,7 +33,7 @@ class Robot {
       console.log(
         `Critical!! >> ${this.name}(${this.health}) to ${target.name}(${target.health})`
       );
-      return false;
+      return true;
     } else {
       return false;
     }
@@ -52,8 +52,8 @@ class Robot {
       if (target.health > 0 && this.health > 0) {
         if (critical)
           target.health =
-            target.health - this.damage * this.criticalMultiplier(3);
-        else target.health = target.health - this.damage;
+            target.health - this.damage * this.criticalMultiplier(0.3);
+        else target.health = Math.floor(target.health - this.damage);
 
         console.log(
           `Damage Done >> ${this.name}(${this.health}) to ${target.name}(${target.health})`
